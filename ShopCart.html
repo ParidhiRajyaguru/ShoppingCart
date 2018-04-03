@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Shopping Cart</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="ShopCart.css" rel="stylesheet" type="text/css">
+    
+    <script src="ShopCart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- Start of MainBody -->
+<div id="main_body" class="fluid-container" ng-app="ShoppingCart" ng-controller="ShoppingCartController">
+<h2 style="text-align:center; color:#FFFFFF;">Brooke's Online Shopping Mart</h2>
+<br>
+
+<!-- Welcome User -->
+<div id="welcome" class="fluid-container">
+<label>Username:</label>
+<input type="text" ng-model="name" placeholder="Enter Name Here">	
+<h3> Welcome {{name}} ! </h3>
+</div>
+<!-- End of Welcome -->
+
+<!-- Start of Shopping Grid -->
+<div id="options" class="container-fluid">
+
+<div class="row">
+
+	<div class="col-lg-4">
+		<img class="picture" src="Chocolate1.jpg">
+		<h4> Nectar Organic Chocolate</h4>
+		<h5> Price: ₹ 750</h5>
+		<br>
+		<h4> Quantity:</h4><input ng-model="q1" placeholder="Enter Quantity">
+	</div>
+	
+	<div class="col-lg-4">
+		<img class="picture" src="Juice2.jpg">
+		<h4> HoneyDrop Tea</h4>
+		<h5> Price: ₹ 150</h5>
+		<br>
+		<h4> Quantity:</h4><input ng-model="q2" placeholder="Enter Quantity">
+	</div>	
+
+	<div class="col-lg-4">
+		<img class="picture" src="Chips.jpg">
+		<h4> Opera Potato Crisps</h4>
+		<h5> Price: ₹ 60</h5>
+		<br>
+		<h4> Quantity:</h4><input ng-model="q3" placeholder="Enter Quantity">
+	</div>		
+
+</div>
+
+</div>
+<!-- End of Shopping Grid -->
+
+<!-- For Total Bill -->
+<div id="total" class="fluid-container">
+<p><h4>Total Bill Amount: ₹ {{calc()}}</h4></p>
+</div>
+<!-- End of Total Bill -->
+
+
+</div>
+<!-- End of MainBody -->
+
+</body>
+</html>
